@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
       LICENSE
   }
   s.author       = 'Google Inc.'
-  s.source       = { :git => "https://github.com/jonbrooks/Google-Analytics.git", :tag => "3.08" }
+  s.source       = { :git => "https://github.com/jonbrooks/Google-Analytics.git" }
   s.platform     = :ios
 
   s.source_files = 'GoogleAnalytics-iOS-SDK/Library/*.h'

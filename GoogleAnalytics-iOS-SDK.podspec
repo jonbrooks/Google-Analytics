@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
       LICENSE
   }
   s.author       = 'Google Inc.'
-  s.source       = { :git => "https://github.com/jonbrooks/Google-Analytics.git" }
+  s.source       = { :git => "https://github.com/jonbrooks/Google-Analytics.git", :tag => "3.08" }
   s.platform     = :ios
 
   s.source_files = 'GoogleAnalytics-iOS-SDK/Library/*.h'
@@ -28,7 +28,6 @@ Pod::Spec.new do |s|
 
   s.frameworks = 'AdSupport', 'CoreData', 'SystemConfiguration'
   s.libraries =  'GoogleAnalyticsServices', 'sqlite3', 'z'
-
 
   s.xcconfig  =  { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/GoogleAnalytics-iOS-SDK/GoogleAnalytics-iOS-SDK/Library"' }
 end

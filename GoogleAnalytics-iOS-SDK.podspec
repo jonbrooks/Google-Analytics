@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "GoogleAnalytics-iOS-SDK"
-  s.version      = "2.0beta4"
+  s.version      = "3.08"
   s.summary      = "GoogleAnalytics for iOS SDK."
   s.description  = <<-DESC
   The Google Analytics SDK for iOS makes it easy for native iOS developers to collect user engagement data form their applications. Developers can then use the Google Analytics reports to measure:
@@ -11,22 +11,23 @@ Pod::Spec.new do |s|
       * In-app purchases and transactions.
       * And many other useful metrics...
   DESC
-  s.homepage     = "https://developers.google.com/analytics/devguides/collection/ios/v2/"
+  s.homepage     = "https://developers.google.com/analytics/devguides/collection/ios/v3/"
 
   s.license      = {
     :type => 'Copyright',
     :text => <<-LICENSE
-      Copyright 2009 - 2012 Google, Inc. All rights reserved.
+      Copyright 2009 - 2013 Google, Inc. All rights reserved.
       LICENSE
   }
   s.author       = 'Google Inc.'
-  s.source       = { :git => "https://github.com/mutualmobile/Google-Analytics.git", :tag => "2.0beta4" }
+  s.source       = { :git => "https://github.com/jonbrooks/Google-Analytics.git", :tag => "3.08" }
   s.platform     = :ios
 
   s.source_files = 'GoogleAnalytics-iOS-SDK/Library/*.h'
   s.preserve_paths = 'GoogleAnalytics-iOS-SDK/Library/*.a'
 
-  s.frameworks = 'CFNetwork', 'CoreData', 'SystemConfiguration'
+  s.frameworks = 'AdSupport', 'CoreData', 'SystemConfiguration'
+  s.libraries = 'z'
   s.library   = 'GoogleAnalytics'
 
   s.xcconfig  =  { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/GoogleAnalytics-iOS-SDK/GoogleAnalytics-iOS-SDK/Library"' }
